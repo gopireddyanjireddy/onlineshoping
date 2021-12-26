@@ -1,0 +1,86 @@
+﻿@model website2.Product1
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<br />
+<br />
+<br />
+<br />
+<div style="background-image: url('https://opticalcortex.com/app/uploads/2014/08/grad.jpg');padding-left:100px">
+
+    <h3 style="text-shadow: 2px 2px;padding-right:50px"> Product Specification </h3>
+    <dl class="dl-horizontal">
+        @*<dt>
+                <h4> Product - Image </h4>
+            </dt>*@
+
+        <dd>
+            <img src="@Url.Content(@Model.pimage)" height="200" width="200" />
+        </dd>
+
+        <dt>
+            <h4> Product - Type:</h4>
+        </dt>
+
+        <dd style="margin-top:10px">
+            @Html.DisplayFor(model => model.ptype)
+        </dd>
+
+        <dt>
+            <h4>Product-Name</h4>
+        </dt>
+
+        <dd style="margin-top:10px">
+            @Html.DisplayFor(model => model.pname)
+        </dd>
+
+        <dt>
+            <h4>Product-Price</h4>
+        </dt>
+
+        <dd style="margin-top:10px">
+            <b><span>&#8377;</span>@Html.DisplayFor(model => model.pprice)
+        </dd>
+
+        <dt>
+            <h4>Product-Rating</h4>
+        </dt>
+
+        <dd style="margin-top:10px">
+            @Html.DisplayFor(model => model.prating)
+        </dd>
+
+        <dt>
+            <h4>Product-Discount</h4>
+        </dt>
+
+        <dd style="margin-top:10px">
+            @Html.DisplayFor(model => model.pdiscount)
+        </dd>
+
+
+
+        <dt>
+            <h4>Description</h4>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+    </dl>
+    <a id="btn_add" href="@Url.Action("Index", "Product")" class="btn btn-outline-primary" style="margin-left:60px">
+
+        <span class="glyphicon glyphicon-eye-open"></span > Continueshopping
+    </a>
+
+    <br />
+
+    <br />
+</div>
+
+
+
+

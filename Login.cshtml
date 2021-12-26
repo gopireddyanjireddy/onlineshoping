@@ -1,0 +1,35 @@
+﻿<br />
+<br />
+<br />
+<br />
+@{
+    ViewBag.Title = "Login";
+}
+
+<div style="text-align: center; padding-top: 200px; background-image: url('https://i.stack.imgur.com/p9mUO.jpg') ">
+    <h2 style="text-shadow:2px 2px;color:cadetblue">Welcome to Online Shoping</h2>
+    <br /><br />
+    @{Html.BeginForm("Login", "Product", FormMethod.Post);
+        <div style="padding-bottom: 30px;font-size:large;color:black">
+                <h4>Enter Username @Html.TextBox("t1", "")</h4>
+
+                <h4>Enter Password @Html.Password("t2", "")</h4>
+
+            <br />
+            <input type="submit" value="Login " class="btn btn-outline-primary" />&nbsp;&nbsp;&nbsp;
+            @Html.ActionLink("New-User", "Reg")
+
+            <div>
+                @if (ViewBag.message != null)
+                {
+                    <h4>Login Status:@ViewBag.message</h4>
+                }
+            </div>
+        </div>
+
+        Html.EndForm();
+    }
+<div>
+    
+
+
